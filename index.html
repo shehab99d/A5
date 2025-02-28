@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style>
+    .poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+    <title>Document</title>
+</head>
+<body class="bg-cyan-100 h-screen">
+    <header>
+        <nav class="mx-32 pt-5">
+            <div class="navbar bg-base-100 flex justify-between rounded-xl">
+                <div class="ml-3">
+                    <img class="w-7" src="assets/logo.png" alt="">
+                    <a class=" text-xl inline-flex whitespace-nowrap">
+                        Dev<span class="font-bold">Board</span>
+                    </a>
+                </div>
+                
+                <div class="mr-3">
+                    <div class="bg-cyan-100 p-2 items-center rounded-full flex mr-6">
+                        <div class="">
+                            <img class="w-6 mr-2" src="assets/checkbox.png" alt="">
+                        </div>
+                        <h1 class="text-2xl font-bold">23</h1>
+                    </div>
+                    <div class=" rounded-full">
+                        <button><img id="color-btn" class="w-7 h-7" src="assets/theme-btn.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="flex justify-between mx-32 mt-5  rounded-xl">
+        <section class="w-3/4">
+            <div class=" bg-white  gap-5 flex items-center justify-between ">
+                <div  class="w-1/4 ml-5 rounded-md p-3 my-3 flex items-center bg-indigo-100 ">
+                    <div class="bg-white p-2 rounded-full mr-3">
+                        <img class="w-4" src="assets/checkbox.png" alt="">
+                    </div>
+                    <div>
+                        <p class="m-0">Task Assigned</p>
+                        <p class="mb- font-bold text-2xl">05</p>
+                    </div>
+                </div>
+                <div class="rounded-md w-1/2 flex bg-indigo-100 items-center bg-gradient-to-l from-[#3752FD] to-[#9BA8F8]">
+                    <div class="">
+                        <img src="assets/board.png" alt="">
+                    </div>
+                    <div>
+                        <p>Discover Something <br>New Today!</p>
+                    </div>
+                </div>                
+                <div class="w-1/4 mr-5 rounded-md p-3 my-3 flex items-center bg-indigo-100">
+                    <div class="bg-white p-2 rounded-full mr-3">
+                        <img class="w-4" src="assets/calender.png" alt="">
+                    </div>
+                    <div>
+                        <h1>Wed ,
+                            <br><span class="font-bold">Jul 28 2025</span> </h1>
+                    </div>
+                </div>
+            </div>            
+            
+        </section>
+        <section class="w-1/4">
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum obcaecati expedita labore cumque eos veniam architecto vero fugiat molestias. Incidunt, cupiditate. Animi possimus optio mollitia sint reiciendis harum iste veritatis, maiores, praesentium quasi libero facilis repellat iure suscipit in unde?</h1>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+
+
+    <script src="script/script.js"></script>
+</body>
+</html>
