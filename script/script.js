@@ -22,26 +22,55 @@ const date = new Date();
 
 
 
+
 const alertBtn = document.getElementsByClassName('task-btn');
-const taskCount = document.getElementById('minus-count')
+const taskCount = document.getElementById('minus-count');
 const taskPlusCount = document.getElementById('plus-count');
+    
+    let clickedCount = 0;
+    
+    for (let i = 0; i < alertBtn.length; i++) {
+        alertBtn[i].addEventListener('click', function () {
+            alertBtn[i].classList.add('bg-gray-400', 'text-gray-500', 'cursor-not-allowed');
+            alertBtn[i].disabled = true;
+            clickedCount++;
+    
+            alert("Board Updated Successfully");
+            
+            let currentCount = parseInt(taskCount.innerText);
+            if (currentCount > 0) {
+                taskCount.innerText = currentCount - 1;
+            }
+    
+            let currentPlusCount = parseInt(taskPlusCount.innerText);
+            taskPlusCount.innerText = currentPlusCount + 1;
+            
+            if (clickedCount === alertBtn.length) {
+                 setTimeout(() => {
+                    alert("All tasks are completed!");
+                }, 100);
+            }
+        });
+    }
+    
+    
 
-for(let i = 0; i < alertBtn.length; i++){
-    alertBtn[i].addEventListener('click', function(){
-        alertBtn[i].classList.add('bg-gray-400', 'text-gray-500', 'cursor-not-allowed');
-        alertBtn[i].disabled = true;
-        alert("Board Updated Successfully");
+    function logActivity(taskName, completionText) {
+        const currentTime = new Date().toLocaleTimeString();
+        const activityLog = document.getElementById('activity-log');
+        const activityEntry = document.createElement('p');
+        activityEntry.textContent = `${completionText} at ${currentTime}`;
+        activityEntry.classList.add('bg-blue-200', 'p-2', 'rounded-md', 'mx-3', 'mb-2');
+        activityLog.appendChild(activityEntry);
 
-        let currentCount = parseInt(taskCount.innerText)
-        if(currentCount > 0){
-            taskCount.innerText = currentCount -1;
-        }
-
-        let currentPlusCount = parseInt(taskPlusCount.innerText);
-        if (currentPlusCount > 0) {
-            taskPlusCount.innerText = currentPlusCount +1;
-        }
-    })
 }
 
+document.getElementById('clear-history').addEventListener('click', 
+    function (){
+        const activityLog = document.getElementById('activity-log');
+        activityLog.innerText = '';
+    }
+);
 
+    
+    
